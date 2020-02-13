@@ -6,19 +6,19 @@ Elasticsearch에 노리 플러그인을 설치한 Docker Image [View on DockerHu
 ## Pre-installed packages
 
 ### Elasticsearch
- * Elasticsearch: 7.5.2
+ * Elasticsearch: 7.6.0
 
 ### Elasticsearch Plugin
  * Nori Plugin
 
 ## 이미지 빌드
-```docker build -t vanillabrain/elasticsearch-nori:7.5.2 .```
+```docker build -t vanillabrain/elasticsearch-nori:7.6.0 .```
 
 ## 실행
 ```
 docker run -d --name elasticsearch \
 -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" \
-vanillabrain/elasticsearch-nori:7.5.2
+vanillabrain/elasticsearch-nori:7.6.0
 ```
 
 ## 호스트의 사전,필터파일 volume 연결 후 실행
@@ -28,7 +28,7 @@ docker run -d --name elasticsearch \
 -v $PWD/user_dictionary.txt:/usr/share/elasticsearch/config/user_dictionary.txt \
 -v $PWD/synonymsFilter.txt:/usr/share/elasticsearch/config/synonymsFilter.txt \
 -v $PWD/stopFilter.txt:/usr/share/elasticsearch/config/stopFilter.txt \
-vanillabrain/elasticsearch-nori:7.5.2
+vanillabrain/elasticsearch-nori:7.6.0
 ```
 
 ## Nori 적용관련 Reference
